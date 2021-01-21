@@ -38,6 +38,7 @@ class MainActivity : AppCompatActivity() {
 
         button_answer_correct.setOnClickListener { onWordAnsweredCorrectly() }
         button_answer_incorrect.setOnClickListener { onWordAnsweredIncorrectly() }
+        text_sight_word.setOnLongClickListener { requestResetWordList(); true }
 
         updateDisplay()
     }
@@ -63,6 +64,13 @@ class MainActivity : AppCompatActivity() {
             savedState.getStringArray(KEY_INCORRECT_WORDS)
         ).toMutableList()
         isShowingRetries = savedState.getBoolean(KEY_IS_SHOWING_RETRIES)
+    }
+
+    private fun requestResetWordList() {
+        if (!hasWordsRemaining) {
+            initializeWordList()
+            updateDisplay()
+        }
     }
 
     private fun onWordAnsweredCorrectly() {
