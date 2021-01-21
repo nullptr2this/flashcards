@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="background_flash_card">#FF000000</color>
+    <color name="background_button_answer_correct">#8800FF00</color>
+    <color name="background_button_answer_incorrect">#88FF0000</color>
+    <color name="background_button_answer_correct_ripple">#FF00FF00</color>
+    <color name="background_button_answer_incorrect_ripple">#FFFF0000</color>
+    <color name="outline_button_answer">#FFFFFFFF</color>
+    <color name="text_color_sight_word">#FFFFFFFF</color>
+    <color name="text_color_word_counter">#FFFFFFFF</color>
+    <color name="text_color_word_counter_retries">#FFFF0000</color>
+</resources>

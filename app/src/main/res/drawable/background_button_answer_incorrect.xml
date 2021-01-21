@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ripple xmlns:android="http://schemas.android.com/apk/res/android"
+    android:color="@color/background_button_answer_incorrect_ripple">
+    <item>
+        <shape android:shape="rectangle">
+            <corners android:radius="16dp"/>
+            <stroke android:color="@color/outline_button_answer" android:width="4dp"/>
+            <solid android:color="@color/background_button_answer_incorrect"/>
+        </shape>
+    </item>
+</ripple>
