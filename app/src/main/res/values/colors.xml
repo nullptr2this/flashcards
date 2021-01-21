@@ -9,4 +9,6 @@
     <color name="text_color_sight_word">#FFFFFFFF</color>
     <color name="text_color_word_counter">#FFFFFFFF</color>
     <color name="text_color_word_counter_retries">#FFFF0000</color>
+    <color name="text_color_word_count_correct">#FF00FF00</color>
+    <color name="text_color_word_count_incorrect">#FFFF0000</color>
 </resources>
