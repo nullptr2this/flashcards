@@ -1,6 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <color name="background_flash_card">#FF000000</color>
+    <color name="background_button">#88000000</color>
+    <color name="background_button_ripple">#FF000000</color>
+    <color name="outline_button">#FFFFFFFF</color>
     <color name="background_button_answer_correct">#8800FF00</color>
     <color name="background_button_answer_incorrect">#88FF0000</color>
     <color name="background_button_answer_correct_ripple">#FF00FF00</color>

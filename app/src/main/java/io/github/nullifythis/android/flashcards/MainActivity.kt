@@ -1,15 +1,25 @@
 package io.github.nullifythis.android.flashcards
 
+import android.content.Context
+import android.content.Intent
 import android.content.res.ColorStateList
+import android.graphics.Color
 import android.os.Bundle
-import android.view.View
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.content.ContextCompat
 import kotlinx.android.synthetic.main.activity_main.*
+import nl.dionsegijn.konfetti.models.Shape
+import nl.dionsegijn.konfetti.models.Size
 
 class MainActivity : AppCompatActivity() {
 
     companion object {
+        fun intentFor(context: Context, option: Words.Options) =
+            Intent(context, MainActivity::class.java).apply {
+                putExtra(EXTRA_WORDS_OPTION, option)
+            }
+        private const val EXTRA_WORDS_OPTION = "EXTRA_WORDS_OPTION"
+
         private const val KEY_REMAINING_WORDS = "KEY_REMAINING_WORDS"
         private const val KEY_INCORRECT_WORDS = "KEY_INCORRECT_WORDS"
         private const val KEY_IS_SHOWING_RETRIES = "KEY_IS_SHOWING_RETRIES"
@@ -30,12 +40,7 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-        container_content.systemUiVisibility = View.SYSTEM_UI_FLAG_FULLSCREEN or
-                View.SYSTEM_UI_FLAG_LAYOUT_FULLSCREEN or
-                View.SYSTEM_UI_FLAG_HIDE_NAVIGATION or
-                View.SYSTEM_UI_FLAG_LAYOUT_HIDE_NAVIGATION or
-                View.SYSTEM_UI_FLAG_IMMERSIVE_STICKY or
-                View.SYSTEM_UI_FLAG_LAYOUT_STABLE
+        setupForFullScreen()
 
         savedInstanceState?.let { restoreWordList(it) }
             ?: initializeWordList()
@@ -57,7 +62,9 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun initializeWordList() {
-        remainingWords = Words.createRandomizedList().toMutableList()
+        remainingWords = Words.createWordsForFlashCards(
+            intent.getSerializableExtra(EXTRA_WORDS_OPTION) as Words.Options
+        ).toMutableList()
         incorrectWords = mutableListOf()
         isShowingRetries = false
         correctAnswerCount = 0
@@ -122,5 +129,18 @@ class MainActivity : AppCompatActivity() {
         )
         text_word_count_correct.text = String.format("%03d", correctAnswerCount)
         text_word_count_incorrect.text = String.format("%03d", incorrectAnswerCount)
+
+        if (!hasWordsRemaining) {
+            container_confetti.build()
+                .addColors(Color.YELLOW, Color.GREEN, Color.MAGENTA)
+                .setDirection(0.0, 359.0)
+                .setSpeed(1f, 5f)
+                .setFadeOutEnabled(true)
+                .setTimeToLive(2000L)
+                .addShapes(Shape.Square, Shape.Circle)
+                .addSizes(Size(12))
+                .setPosition(-50f, container_confetti.width + 50f, -50f, -50f)
+                .streamFor(300, 5000L)
+        }
     }
 }
