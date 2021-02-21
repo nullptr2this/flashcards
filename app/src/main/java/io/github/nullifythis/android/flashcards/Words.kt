@@ -25,7 +25,7 @@ object Words {
     }
 
     private fun createSightWordListWithAllWords(): List<String> {
-        return randomizeListOfWords(allWords.toList())
+        return randomizeListOfWords(allWords.toList()).take(25)
     }
 
     private fun createAlphabet(): List<String> {
