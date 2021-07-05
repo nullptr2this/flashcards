@@ -59,31 +59,23 @@ object Words {
     }
 
     private val newWords: Set<String> = setOf(
-
-        "or",
-        "these",
-        "drink",
-        "once",
-
-        "put",
-        "full",
-        "found",
-        "sing",
-
-        "round",
-        "cut",
-        "grow",
-        "them",
-
-        "sit",
-        "use",
-        "long",
-        "were",
-
-        "then",
-        "both",
-        "many",
-        "work",
+        "together",
+        "write",
+        "much",
+        "would",
+        "under",
+        "boy",
+        "girl",
+        "other",
+        "very",
+        "day",
+        "some",
+        "warm",
+        "know",
+        "their",
+        "would",
+        "man",
+        "very"
     )
 
     private val allWords: Set<String> = setOf(
@@ -260,5 +252,55 @@ object Words {
         "wash",
         "don't",
         "may",
+
+        "or",
+        "these",
+        "drink",
+        "once",
+
+        "put",
+        "full",
+        "found",
+        "sing",
+
+        "round",
+        "cut",
+        "grow",
+        "them",
+
+        "sit",
+        "use",
+        "long",
+        "were",
+
+        "then",
+        "both",
+        "many",
+        "work",
+
+        "bring",
+        "myself",
+        "own",
+        "thank",
+
+        "buy",
+        "never",
+        "sleep",
+        "their",
+
+        "clean",
+        "only",
+        "small",
+        "think",
+
+        "know",
+        "open",
+        "some",
+        "those",
+
+        "much",
+        "over",
+        "start",
+        "today"
     )
 }
