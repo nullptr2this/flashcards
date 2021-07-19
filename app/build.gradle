@@ -7,8 +7,8 @@ android {
     buildToolsVersion "30.0.1"
 
     defaultConfig {
-        applicationId "io.github.nullifythis.android.flashcards"
-        minSdkVersion 29
+        applicationId "io.github.nullifythis.android.flashy"
+        minSdkVersion 26
         targetSdkVersion 30
         versionCode 1
         versionName "1.0"
