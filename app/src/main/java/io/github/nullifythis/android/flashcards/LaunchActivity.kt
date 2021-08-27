@@ -12,16 +12,16 @@ class LaunchActivity : AppCompatActivity() {
         setupForFullScreen()
 
         button_new_words.setOnClickListener {
-            startFlashCardsFor(Words.Options.WORDS_NEW)
+            startFlashCardsFor(Words.Options.GROUP_1)
         }
         button_all_words.setOnClickListener {
-            startFlashCardsFor(Words.Options.WORDS_ALL)
+            startFlashCardsFor(Words.Options.GROUP_2)
         }
         button_letters_ordered.setOnClickListener {
-            startFlashCardsFor(Words.Options.LETTERS_ORDERED)
+            startFlashCardsFor(Words.Options.GROUP_3)
         }
         button_letters_random.setOnClickListener {
-            startFlashCardsFor(Words.Options.LETTERS_RANDOM)
+            startFlashCardsFor(Words.Options.GROUP_4)
         }
     }
 
