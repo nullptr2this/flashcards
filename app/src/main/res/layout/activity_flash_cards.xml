@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/container_content"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/black"
+    android:fitsSystemWindows="true">
+
+    <nl.dionsegijn.konfetti.KonfettiView
+        android:id="@+id/container_confetti"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/text_word_counter"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/spacer"
+        android:layout_marginRight="@dimen/spacer"
+        android:textColor="@color/text_color_word_counter"
+        android:textSize="32sp"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/text_sight_word"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:textColor="@color/text_color_sight_word"
+        android:textSize="112sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/button_answer_correct"
+        android:layout_width="64dp"
+        android:layout_height="64dp"
+        android:layout_marginLeft="@dimen/spacer"
+        android:layout_marginBottom="@dimen/spacer"
+        android:background="@drawable/background_button_answer_correct"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent" />
+
+    <Button
+        android:id="@+id/button_answer_incorrect"
+        android:layout_width="64dp"
+        android:layout_height="64dp"
+        android:layout_marginLeft="@dimen/spacer"
+        android:layout_marginBottom="@dimen/spacer"
+        android:background="@drawable/background_button_answer_incorrect"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toRightOf="@+id/button_answer_correct" />
+
+    <TextView
+        android:id="@+id/text_word_count_correct"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="@dimen/spacer"
+        android:layout_marginBottom="@dimen/spacer"
+        android:gravity="right"
+        android:textColor="@color/text_color_word_count_correct"
+        android:textSize="32sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintRight_toLeftOf="@+id/text_word_count_incorrect" />
+
+    <TextView
+        android:id="@+id/text_word_count_incorrect"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="@dimen/spacer"
+        android:layout_marginBottom="@dimen/spacer"
+        android:gravity="right"
+        android:textColor="@color/text_color_word_count_incorrect"
+        android:textSize="32sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintRight_toRightOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>

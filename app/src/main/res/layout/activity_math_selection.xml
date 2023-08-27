@@ -16,71 +16,38 @@
             android:layout_height="wrap_content"
             android:layout_margin="16dp"
             android:layout_marginTop="32dp"
-            android:text="What would you like to work on?"
+            android:text="Pick an area of arithmetic to work on."
             android:textColor="@android:color/white"
             android:textSize="32sp" />
 
         <Button
-            android:id="@+id/button_letters"
+            android:id="@+id/button_addition_under_10"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="16dp"
             android:background="@drawable/background_button"
-            android:text="Abc"
+            android:text="Addition: Results below 10"
             android:textAllCaps="false"
             android:textSize="20sp" />
 
         <Button
-            android:id="@+id/button_numbers"
+            android:id="@+id/button_addition_to_10"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="16dp"
             android:background="@drawable/background_button"
-            android:text="123"
-            android:textAllCaps="false"
-            android:textSize="20sp"
-            android:visibility="gone" />
-
-        <Button
-            android:id="@+id/button_sight_words"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_margin="16dp"
-            android:background="@drawable/background_button"
-            android:text="Sight words"
+            android:text="Addition: #s adding to 10"
             android:textAllCaps="false"
             android:textSize="20sp" />
 
         <Button
-            android:id="@+id/button_spelling_words"
+            android:id="@+id/button_addition_from_10_to_20"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="16dp"
             android:background="@drawable/background_button"
-            android:text="Spelling words"
-            android:textAllCaps="false"
-            android:textSize="20sp"
-            android:visibility="gone" />
-
-        <Button
-            android:id="@+id/button_math"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_margin="16dp"
-            android:background="@drawable/background_button"
-            android:text="Math"
+            android:text="Addition: Results from 10 to 20"
             android:textAllCaps="false"
             android:textSize="20sp" />
-
-        <Button
-            android:id="@+id/button_time"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_margin="16dp"
-            android:background="@drawable/background_button"
-            android:text="Time"
-            android:textAllCaps="false"
-            android:textSize="20sp"
-            android:visibility="gone" />
     </LinearLayout>
 </androidx.core.widget.NestedScrollView>

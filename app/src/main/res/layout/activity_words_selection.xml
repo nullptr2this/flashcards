@@ -16,71 +16,48 @@
             android:layout_height="wrap_content"
             android:layout_margin="16dp"
             android:layout_marginTop="32dp"
-            android:text="What would you like to work on?"
+            android:text="Pick a word group to work on."
             android:textColor="@android:color/white"
             android:textSize="32sp" />
 
         <Button
-            android:id="@+id/button_letters"
+            android:id="@+id/button_group_1"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="16dp"
             android:background="@drawable/background_button"
-            android:text="Abc"
+            android:text="Fry&apos;s 1st 100"
             android:textAllCaps="false"
             android:textSize="20sp" />
 
         <Button
-            android:id="@+id/button_numbers"
+            android:id="@+id/button_group_2"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="16dp"
             android:background="@drawable/background_button"
-            android:text="123"
-            android:textAllCaps="false"
-            android:textSize="20sp"
-            android:visibility="gone" />
-
-        <Button
-            android:id="@+id/button_sight_words"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_margin="16dp"
-            android:background="@drawable/background_button"
-            android:text="Sight words"
+            android:text="Fry&apos;s 2nd 100"
             android:textAllCaps="false"
             android:textSize="20sp" />
 
         <Button
-            android:id="@+id/button_spelling_words"
+            android:id="@+id/button_group_3"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="16dp"
             android:background="@drawable/background_button"
-            android:text="Spelling words"
-            android:textAllCaps="false"
-            android:textSize="20sp"
-            android:visibility="gone" />
-
-        <Button
-            android:id="@+id/button_math"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_margin="16dp"
-            android:background="@drawable/background_button"
-            android:text="Math"
+            android:text="Fry&apos;s 3rd 100"
             android:textAllCaps="false"
             android:textSize="20sp" />
 
         <Button
-            android:id="@+id/button_time"
+            android:id="@+id/button_group_4"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="16dp"
             android:background="@drawable/background_button"
-            android:text="Time"
+            android:text="Fry&apos;s 4th 100"
             android:textAllCaps="false"
-            android:textSize="20sp"
-            android:visibility="gone" />
+            android:textSize="20sp" />
     </LinearLayout>
 </androidx.core.widget.NestedScrollView>

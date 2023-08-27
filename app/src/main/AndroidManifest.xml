@@ -1,25 +1,31 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android">
-
     <application
         android:allowBackup="true"
+        android:extractNativeLibs="false"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
+        android:testOnly="true"
         android:theme="@style/AppTheme">
         <activity
-            android:name=".LaunchActivity"
-            android:screenOrientation="landscape">
+            android:name="io.github.nullifythis.android.flashcards.MainActivity"
+            android:exported="true"
+            android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
         <activity
-            android:name=".MainActivity"
-            android:screenOrientation="landscape">
-        </activity>
+            android:name="io.github.nullifythis.android.flashcards.WordsSelectionActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="io.github.nullifythis.android.flashcards.MathSelectionActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="io.github.nullifythis.android.flashcards.FlashCardsActivity"
+            android:screenOrientation="landscape" />
     </application>
-
 </manifest>
