@@ -13,7 +13,8 @@ object FlashCards {
         ADDITION_RESULTS_UNDER_10,
         ADDITION_RESULTS_EQUAL_TO_10,
         ADDITION_RESULTS_BETWEEN_10_AND_20,
-        MULTIPLICATION_TIMES_TABLES_TO_10
+        MULTIPLICATION_TIMES_TABLES_TO_10,
+        DIVISION_FACTORS_UP_TO_10
     }
 
     fun createFlashCardsForOptions(option: Options): List<String> {
@@ -28,6 +29,7 @@ object FlashCards {
                 Options.ADDITION_RESULTS_EQUAL_TO_10 -> randomizeListOfFlashCards(Math.createFlashCardsForAdditionTo10())
                 Options.ADDITION_RESULTS_BETWEEN_10_AND_20 -> randomizeListOfFlashCards(Math.createFlashCardsForAdditionResultingBetween10And20())
                 Options.MULTIPLICATION_TIMES_TABLES_TO_10 -> randomizeListOfFlashCards(Math.createFlashCardsForTimesTablesTo10())
+                Options.DIVISION_FACTORS_UP_TO_10 -> randomizeListOfFlashCards(Math.createFlashCardsForDivisionWithFactorsUpTo10())
             }
 
         return flashCards.take(25)

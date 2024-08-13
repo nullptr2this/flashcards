@@ -23,6 +23,10 @@ object Math {
         return createFlashCardsForTimesTablesFor(0 .. 10, 10)
     }
 
+    fun createFlashCardsForDivisionWithFactorsUpTo10(): List<String> {
+        return createFlashCardsForDivisionWithFactors(1 .. 10)
+    }
+
     private fun createFlashCardsForNumbersThatAddTo(targetRange: IntRange): List<String> {
         return targetRange.fold(mutableListOf()) { acc, target ->
             acc.apply {
@@ -61,11 +65,31 @@ object Math {
         }
     }
 
+    private fun createFlashCardsForDivisionWithFactors(factors: IntRange): List<String> {
+        return mutableListOf<String>().apply {
+            for (factor1: Int in factors) {
+                for (factor2: Int in factors) {
+                    add(createFlashCardForDivisionWithFactors(factor1, factor2, AnswerWith.Result))
+                    add(createFlashCardForDivisionWithFactors(factor1, factor2, AnswerWith.FirstOperand))
+                    add(createFlashCardForDivisionWithFactors(factor1, factor2, AnswerWith.SecondOperand))
+                }
+            }
+        }
+    }
+
     private fun createFlashCardForMultiplicationOf(operand1: Int, operand2: Int, answerWith: AnswerWith): String {
         return when (answerWith) {
             AnswerWith.Result -> "$operand1 x $operand2 = _"
             AnswerWith.FirstOperand -> "_ x $operand2 = ${operand1 * operand2}"
             AnswerWith.SecondOperand -> "$operand1 x _ = ${operand1 * operand2}"
+        }
+    }
+
+    private fun createFlashCardForDivisionWithFactors(factor1: Int, factor2: Int, answerWith: AnswerWith): String {
+        return when (answerWith) {
+            AnswerWith.Result -> "${factor1 * factor2} ÷ $factor1 = _"
+            AnswerWith.FirstOperand -> "_ ÷ $factor1 = $factor2"
+            AnswerWith.SecondOperand -> "${factor1 * factor2} ÷ _ = $factor2"
         }
     }
 }
