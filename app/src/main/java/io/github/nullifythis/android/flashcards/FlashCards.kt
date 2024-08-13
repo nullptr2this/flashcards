@@ -12,12 +12,13 @@ object FlashCards {
         SIGHT_WORD_GROUP_FRYS_4TH,
         ADDITION_RESULTS_UNDER_10,
         ADDITION_RESULTS_EQUAL_TO_10,
-        ADDITION_RESULTS_BETWEEN_10_AND_20
+        ADDITION_RESULTS_BETWEEN_10_AND_20,
+        MULTIPLICATION_TIMES_TABLES_TO_10
     }
 
     fun createFlashCardsForOptions(option: Options): List<String> {
 
-        val createAlphabetLowerCase: List<String> = when (option) {
+        val flashCards: List<String> = when (option) {
                 Options.LETTERS_ALL_IN_ORDER_LOWER_CASE -> createAlphabetLowerCase()
                 Options.SIGHT_WORD_GROUP_FRYS_1ST -> createSightWordListWithGroup(Words.frys1st100)
                 Options.SIGHT_WORD_GROUP_FRYS_2ND -> createSightWordListWithGroup(Words.frys2nd100)
@@ -26,9 +27,10 @@ object FlashCards {
                 Options.ADDITION_RESULTS_UNDER_10 -> randomizeListOfFlashCards(Math.createFlashCardsForAdditionBelow10())
                 Options.ADDITION_RESULTS_EQUAL_TO_10 -> randomizeListOfFlashCards(Math.createFlashCardsForAdditionTo10())
                 Options.ADDITION_RESULTS_BETWEEN_10_AND_20 -> randomizeListOfFlashCards(Math.createFlashCardsForAdditionResultingBetween10And20())
+                Options.MULTIPLICATION_TIMES_TABLES_TO_10 -> randomizeListOfFlashCards(Math.createFlashCardsForTimesTablesTo10())
             }
 
-        return createAlphabetLowerCase.take(25)
+        return flashCards.take(25)
     }
 
     private fun createAlphabetLowerCase(): List<String> {

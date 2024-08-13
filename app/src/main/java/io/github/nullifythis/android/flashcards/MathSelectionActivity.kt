@@ -24,6 +24,9 @@ class MathSelectionActivity : AppCompatActivity() {
         binding.buttonAdditionFrom10To20.setOnClickListener {
             startFlashCardsFor(FlashCards.Options.ADDITION_RESULTS_BETWEEN_10_AND_20)
         }
+        binding.buttonMultiplicationTimesTablesTo10.setOnClickListener {
+            startFlashCardsFor(FlashCards.Options.MULTIPLICATION_TIMES_TABLES_TO_10)
+        }
     }
 
     private fun startFlashCardsFor(selectedOption: FlashCards.Options?) {

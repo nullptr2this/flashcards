@@ -49,5 +49,15 @@
             android:text="Addition: Results from 10 to 20"
             android:textAllCaps="false"
             android:textSize="20sp" />
+
+        <Button
+            android:id="@+id/button_multiplication_times_tables_to_10"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="16dp"
+            android:background="@drawable/background_button"
+            android:text="Multiplication: Times Tables to 10"
+            android:textAllCaps="false"
+            android:textSize="20sp" />
     </LinearLayout>
 </androidx.core.widget.NestedScrollView>
